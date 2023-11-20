@@ -1,0 +1,33 @@
+/* social.css */
+
+.selected-showtime {
+    color: #605757; /* Set text color to white or another contrasting color */
+    border-radius: 5px;
+    width: 600px; /* Set a fixed width */
+    margin: 0 auto; /* Center the element horizontally */
+    text-align: center; /* Center the text within the element */
+    margin-bottom: 2%;
+    margin-top: 3%;
+}
+
+.seatpiccss {
+    padding: 3%;
+}
+
+.custom-button3 {
+    background-color: #4caf50; /* 绿色背景 */
+    color: white; /* 白色文字 */
+    border: none; /* 无边框 */
+    padding: 10px 20px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时的手型指针 */
+    transition: background-color 0.3s ease; /* 平滑过渡效果 */
+}
+
+.seat-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* 可选的底边框，用于美化 */
+}

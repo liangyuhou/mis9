@@ -1,0 +1,101 @@
+/* secondhandsell.css */
+
+.sell-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.sell-page-container h1 {
+    color: #333; /* 深色文字 */
+    margin: 10px 0;
+}
+.products-sell-container h2 {
+    color: #333; /* 深色文字 */
+    margin: 10px 0;
+    font-size: 14px;
+    max-width: 300px;
+    word-wrap: break-word; /* 在长单词或URL内部断行 */
+    overflow-wrap: break-word; /* 确保文本换行适应容器宽度 */
+}
+.products-sell-container h3 {
+    color: #333; /* 深色文字 */
+    margin: 10px 0;
+    font-size: 14px;
+    max-width: 300px;
+    word-wrap: break-word; /* 在长单词或URL内部断行 */
+    overflow-wrap: break-word; /* 确保文本换行适应容器宽度 */
+}
+.products-sell-container h4 {
+    color: #333; /* 深色文字 */
+    margin: 10px 0;
+    font-size: 14px;
+    max-width: 300px;
+    word-wrap: break-word; /* 在长单词或URL内部断行 */
+    overflow-wrap: break-word; /* 确保文本换行适应容器宽度 */
+}
+
+.sell-page-container label {
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.sell-page-container select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    z-index: 1000; /* 确保模态框在其他元素之上 */
+}
+
+.set-price-btn {
+    /* 使按钮成为块级元素 */
+    background-color: #4caf50; /* 绿色背景 */
+    color: white; /* 白色文字 */
+    border: none; /* 无边框 */
+    padding: 10px 20px; /* 内边距 */
+    /* 上下 10px 的间距，左右自动外边距使其居中 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时的手型指针 */
+    transition: background-color 0.3s ease; /* 平滑过渡效果 */
+    width: 100%;
+}
+
+.set-price-btn:hover {
+    background-color: #45a049; /* 悬停时更深的绿色 */
+}
+
+.products-sell-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center; /* 修改此处 */
+    align-items: center;
+}
+
+/* Individual product item */
+.product-sell-item {
+    /* 为每个产品项设置宽度 */
+    margin-bottom: 20px; /* 添加一些间距 */
+    text-align: center; /* 居中文本 */
+}
+
+/* Image style */
+.product-sell-item img {
+    width: 100%; /* 图片宽度设置为占满整个产品项宽度 */
+    height: auto; /* 高度自动调整 */
+}

@@ -1,0 +1,81 @@
+/* mainBanner.css */
+
+.yellow-bg {
+    background-color: rgba(255, 196, 0, 0.896);
+    color: #333; /* 设置文本颜色 */
+    border-radius: 5px; /* 设置圆角 */
+    padding: 5px 10px; /* 设置内边距 */
+    margin-left: 8px;
+}
+
+.logo {
+    width: 3cm;
+    height: 3cm;
+}
+
+.navbarw {
+    background-image: url('/src/images/movies/emancipation.jpg');
+    background-size: cover;
+    height: 250px;
+    background-position: center -50px; /* 从顶部下移50px开始显示背景图片 */
+    /* margin-top: -4%; */
+}
+
+.user-avatar-container {
+    width: 60px; /* 设置头像容器的宽度 */
+    height: 60px; /* 设置头像容器的高度 */
+    overflow: hidden; /* 隐藏头像溢出部分 */
+    border-radius: 50%; /* 将头像容器的形状设置为圆形 */
+    margin-top: 2%;
+}
+
+.user-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 调整头像的显示方式以填充容器 */
+}
+.searchf {
+    display: flex;
+    align-items: center;
+}
+
+.login_icon {
+    display: flex;
+    justify-content: center;
+}
+
+.login_item {
+    display: flex;
+    justify-content: center;
+    white-space: pre-line;
+}
+
+.search-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 垂直方向居中对齐 */
+    flex-direction: row; /* 主轴方向为水平 */
+}
+
+.search-bar input {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}

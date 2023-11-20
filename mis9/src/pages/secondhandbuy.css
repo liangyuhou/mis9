@@ -1,0 +1,104 @@
+/* secondhandbuy.css */
+
+.buy-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.buy-page-container h1 {
+    color: #333; /* 深色文字 */
+    margin: 10px 0;
+}
+
+.buy-page-container label {
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.buy-page-container select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+.products-buy-container h2 {
+    color: #333; /* 深色文字 */
+    margin: 10px 0;
+    font-size: 14px;
+    max-width: 300px;
+    word-wrap: break-word; /* 在长单词或URL内部断行 */
+    overflow-wrap: break-word; /* 确保文本换行适应容器宽度 */
+}
+
+.products-buy-container h3 {
+    color: #333; /* 深色文字 */
+    margin: 10px 0;
+    font-size: 14px;
+    max-width: 300px;
+    word-wrap: break-word; /* 在长单词或URL内部断行 */
+    overflow-wrap: break-word; /* 确保文本换行适应容器宽度 */
+}
+.products-buy-container h4 {
+    color: #333; /* 深色文字 */
+    margin: 10px 0;
+    font-size: 14px;
+    max-width: 300px;
+    word-wrap: break-word; /* 在长单词或URL内部断行 */
+    overflow-wrap: break-word; /* 确保文本换行适应容器宽度 */
+}
+.products-buy-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 创建三列，每列宽度相等 */
+    gap: 10px;
+    width: 100%;
+}
+
+/* Individual product item */
+.product-item {
+    /* 为每个产品项设置宽度 */
+    margin-bottom: 20px; /* 添加一些间距 */
+    text-align: center; /* 居中文本 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Image style */
+.product-item img {
+    width: 100%; /* 图片宽度设置为占满整个产品项宽度 */
+    height: auto; /* 高度自动调整 */
+}
+
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    z-index: 1000; /* 确保模态框在其他元素之上 */
+}
+
+.buy-button {
+    display: block; /* 使按钮成为块级元素 */
+    background-color: #4caf50; /* 绿色背景 */
+    color: white; /* 白色文字 */
+    border: none; /* 无边框 */
+    padding: 10px 100px; /* 内边距 */
+    margin: 10px auto; /* 上下 10px 的间距，左右自动外边距使其居中 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时的手型指针 */
+    transition: background-color 0.3s ease; /* 平滑过渡效果 */
+    max-width: 300px;
+}
+
+.buy-button {
+    background-color: #45a049; /* 悬停时更深的绿色 */
+}
