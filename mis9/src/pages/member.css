@@ -1,0 +1,40 @@
+/* member.css */
+
+.mytickets-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center; /* 修改此处 */
+    align-items: center;
+}
+
+/* Image style */
+.mytickets-item img {
+    width: 100%; /* 图片宽度设置为占满整个产品项宽度 */
+    height: auto; /* 高度自动调整 */
+}
+
+.navigation-button {
+    background: none;
+    border: none;
+    font-size: 24px; /* 或其他大小 */
+    cursor: pointer;
+    /* 更多样式... */
+}
+
+.mytickets-item {
+    margin: 0 20px; /* 在按钮和图片之间添加一些空间 */
+    text-align: center; /* 居中文本 */
+    /* 其他样式... */
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 3%;
+}

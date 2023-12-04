@@ -63,7 +63,7 @@
 
 .set-price-btn {
     /* 使按钮成为块级元素 */
-    background-color: #4caf50; /* 绿色背景 */
+    background-color: #556680; /* 绿色背景 */
     color: white; /* 白色文字 */
     border: none; /* 无边框 */
     padding: 10px 20px; /* 内边距 */
@@ -75,7 +75,7 @@
 }
 
 .set-price-btn:hover {
-    background-color: #45a049; /* 悬停时更深的绿色 */
+    background-color: #384457; /* 悬停时更深的绿色 */
 }
 
 .products-sell-container {

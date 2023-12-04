@@ -32,7 +32,6 @@ function Navbar() {
 
                 <NavbarItem path="/contact" name="Contact" />
                 <NavbarItem path="/help" name="Help" />
-                <NavbarItem path="/shoppingCart" name="ShoppingCart" />
             </div>
         </div>
     );

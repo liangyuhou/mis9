@@ -63,8 +63,8 @@
 
 .switchbar-btn.active {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff; /* 激活状态的边框颜色 */
+    background-color: #556680;
+    border-color: #556680; /* 激活状态的边框颜色 */
 }
 
 .cursor-pointer {

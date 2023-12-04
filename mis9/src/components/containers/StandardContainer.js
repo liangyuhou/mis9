@@ -1,8 +1,9 @@
 import StandardLink from '../links/StandardLink';
+import '../containers/StandardContainer.css';
 
-function StandardContainer({ title, description, date, image, style }) {
+function StandardContainer({ title, description, date, image, style, path }) {
     return (
-        <div className={`flex items-center py-4 ${style} justify-between px-28`}>
+        <div className={`flex items-center py-4 ${style} justify-between px-44`}>
             {/* 左邊是圖片 */}
             <img src={image} alt="Main banner" className="w-[400px] h-[200px]" />
 
@@ -13,8 +14,8 @@ function StandardContainer({ title, description, date, image, style }) {
                 <p className="font-thin text-lg">{date}</p>
             </div>
             {/* Buy按鈕在右側 */}
-            <div className="flex items-center">
-                <StandardLink path="/store" name="Buy >" />
+            <div className="homebutton ">
+                <StandardLink path={path} name="Buy >" />
             </div>
         </div>
     );

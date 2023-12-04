@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import StandardLayout from '../components/layout/StandardLayout';
 import SecondBanner from '../components/banners/SecondBanner';
-import img1 from '../images/concert/concert1.png';
-import img2 from '../images/concert/concert2.png';
-import img3 from '../images/concert/concert3.png';
+import img1 from '../images/concert/nft1.jpg';
+import img2 from '../images/concert/nft2.jpg';
+import img3 from '../images/concert/nft3.jpg';
 import img4 from '../images/concert/concert4.png';
 import './secondhandbuy.css';
 

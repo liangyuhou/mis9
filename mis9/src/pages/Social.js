@@ -1,24 +1,24 @@
 import StandardLayout from '../components/layout/StandardLayout';
 import React, { useState, useEffect } from 'react';
-import seatpic from '../images/seat.webp';
+import seatpic from '../images/seat5.jpg';
 import { Link } from 'react-router-dom';
 import './social.css';
-import concertpic2 from '../images/concert/concert1.png';
+import concertpic2 from '../images/concert/concert5.jpg';
 
 function Social() {
     const eventInfo = {
-        eventName: 'BLACKPINK高雄站演唱會 2023｜BORN PINK',
+        eventName: '2023 LE SSERAFIM TOUR FLAME RISES',
         eventSubtitle: '高雄國家體育場 (世運主場館:高雄市左營區世運大道100號)',
         dateTimeLocation: '高雄國家體育場 (世運主場館:高雄市左營區世運大道100號)',
         imageUrl: concertpic2, // 請替換成實際的圖片路徑
     };
-    const date1 = '2023-03-18';
-    const date2 = '2023-03-19';
+    const date1 = '2023-09-30';
+    const date2 = '2023-10-01';
 
     const seatList = [
         {
             id: 1,
-            name: 'BORN PINK座位特區  (票價含Sound Check粉絲福利)',
+            name: 'FEARNOT座位特區 ',
             price: 8800,
             left: 432,
             date: date1,
@@ -35,7 +35,7 @@ function Social() {
         { id: 11, name: '看台座位區', price: 2300, left: 432, date: date1 },
         {
             id: 12,
-            name: 'BORN PINK座位特區  (票價含Sound Check粉絲福利)',
+            name: 'FEARNOT座位特區',
             price: 8800,
             left: 432,
             date: date2,
@@ -79,8 +79,10 @@ function Social() {
                         alignItems: 'center',
                         marginBottom: '30px',
                         padding: '20px',
-                        position: 'relative', // 为了绝对定位线条
+                        position: 'relative',
+                        // 为了绝对定位线条
                     }}
+                    className="-z-10"
                 >
                     {/* 添加用于连接圈圈的线 */}
                     <div
@@ -150,8 +152,8 @@ function Social() {
                 <div className="selected-showtime">
                     <select onChange={handleDateChange} value={selectedDate}>
                         <option value="">請選擇日期</option>
-                        <option value={date1}>2023年3月18日 18:30</option>
-                        <option value={date2}>2023年3月19日 18:30</option>
+                        <option value={date1}>2023年9月30日 18:30</option>
+                        <option value={date2}>2023年10月1日 18:30</option>
                         {/* 其他日期... */}
                     </select>
                 </div>
@@ -161,12 +163,16 @@ function Social() {
                     {/* 左邊放圖片 */}
                     <div style={{ flex: 1 }}>
                         <div className="seatpiccss">
-                            <img src={seatpic} style={{ maxWidth: '100%' }} alt="Seat" />
+                            <img
+                                src={seatpic}
+                                style={{ width: '700px', height: '700px' }}
+                                alt="Seat"
+                            />
                         </div>
                     </div>
 
                     {/* 右邊放購物列表 */}
-                    <div style={{ flex: 1, marginLeft: '20px' }}>
+                    <div style={{ flex: 1, marginRight: '20px' }}>
                         <div className="seat-list">
                             <h1>請選擇區域</h1>
                             <ul>
@@ -174,8 +180,7 @@ function Social() {
                                     <li key={seat.id}>
                                         <div className="product-details">
                                             <span>{seat.name}</span>
-                                            <span>NTD {seat.price}</span>
-                                            <span>剩餘票數 {seat.left}</span>
+                                            <span>(剩餘票數 {seat.left})</span>
                                         </div>
                                         <div className="button-container3">
                                             {/* ...其他內容 */}
@@ -183,7 +188,7 @@ function Social() {
                                                 {' '}
                                                 {/* 將 "/social" 路徑指向您的購票頁面 */}
                                                 <button className="custom-button3">
-                                                    buy
+                                                    NTD {seat.price}
                                                 </button>
                                             </Link>
                                         </div>
@@ -194,9 +199,9 @@ function Social() {
                     </div>
                 </div>
                 {/* 注意事項區塊 */}
-                <div style={{ marginTop: '20px' }}>
-                    <h3>注意事項</h3>
-                    <p className="text-[15px] color:gray">
+                <div className="notice">
+                    <h3> Notice</h3>
+                    <p className="noticecontent text-[15px]">
                         <br />
                         ■座位區皆為劃位座席，請依票面座位號入座
                         <br />

@@ -1,8 +1,8 @@
 /* mainBanner.css */
 
 .yellow-bg {
-    background-color: rgba(255, 196, 0, 0.896);
-    color: #333; /* 设置文本颜色 */
+    background-color: rgba(54, 57, 63, 0.896);
+    color: #e6e3e3; /* 设置文本颜色 */
     border-radius: 5px; /* 设置圆角 */
     padding: 5px 10px; /* 设置内边距 */
     margin-left: 8px;
@@ -59,12 +59,12 @@
 }
 
 .search-bar input {
-    width: 200px;
-    height: 30px;
+    width: 350px;
+    height: 50px;
     padding: 5px;
     font-size: 14px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .search-bar button {

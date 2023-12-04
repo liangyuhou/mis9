@@ -11,7 +11,7 @@
     margin: 0 auto; /* è®“æ¡†æ¡†æ°´å¹³ç½®ä¸­ */
     text-align: center; /* è®“æ¡†æ¡†å…§å®¹ç½®ä¸­ */
     padding: 10px; /* å¯æ ¹æ“šéœ€è¦èª¿æ•´æ¡†æ¡†å…§çš„é–“è· */
-    border: 2px solid #050000; /* å¯ä»¥è¨­å®šé‚Šæ¡†æ¨£å¼ */
+    border: 2px solid #344052; /* å¯ä»¥è¨­å®šé‚Šæ¡†æ¨£å¼ */
     border-radius: 10px; /* å¯ä»¥è¨­å®šåœ“è§’ */
     z-index: 1;
     margin-top: 3%;
@@ -29,9 +29,9 @@
 .custom-button {
     width: 150px; /* è¨­å®šå¯¬åº¦ */
     height: 40px; /* è¨­å®šé«˜åº¦ */
-    background-color: orange;
+    background-color: #556680;
     color: white;
-    border: 2px solid orange;
+    border: 2px solid #556680;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -45,9 +45,9 @@
 }
 
 .custom-button:hover {
-    background-color: white; /* æ»‘é¼ æ‡¸åœæ™‚èƒŒæ™¯è®Šç‚ºç™½è‰² */
-    color: orange; /* æ–‡å­—é¡è‰²è®Šç‚ºæ©˜è‰² */
-    border-color: orange; /* é‚Šæ¡†é¡è‰²è®Šç‚ºæ©˜è‰² */
+    background-color: #344052;
+    color: white;
+    border-color: #344052;
 }
 
 .button-text {
@@ -100,8 +100,8 @@
 .custom-button2 {
     width: 250px;
     height: 40px;
-    background-color: rgb(247, 164, 10);
-    color: black;
+    background-color: #556680;
+    color: white;
     padding: 3px 3px;
     border-radius: 5px;
     cursor: pointer;
@@ -109,4 +109,10 @@
     margin-top: 10px;
     margin-bottom: 10px;
     z-index: 1;
+}
+
+.custom-button2:hover {
+    background-color: #344052;
+    color: white;
+    border-color: #344052;
 }

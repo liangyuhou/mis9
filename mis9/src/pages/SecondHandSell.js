@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import StandardLayout from '../components/layout/StandardLayout';
 import SecondBanner from '../components/banners/SecondBanner';
-import img1 from '../images/concert/concert1.png';
-import img2 from '../images/concert/concert2.png';
-import img3 from '../images/concert/concert3.png';
+import img1 from '../images/concert/nft1.jpg';
+import img2 from '../images/concert/nft2.jpg';
+import img3 from '../images/concert/nft3.jpg';
 import img4 from '../images/concert/concert4.png';
+import img5 from '../images/concert/nft5.webp';
+
 import './secondhandsell.css';
 import { Link } from 'react-router-dom';
 
@@ -101,6 +103,14 @@ const productsData = [
         price: '2500',
         image: img4,
     },
+    {
+        id: 5,
+        name: '2023 LE SSERAFIM TOUR FLAME RISES',
+        date: '2023年9月30日 18:30',
+        category: 'concert5',
+        price: '2500',
+        image: img5,
+    },
     // Add more product data as needed
 ];
 
@@ -159,6 +169,9 @@ const SecondHandSell = () => {
                             </option>
                             <option value="concert4">
                                 JOJI-Pandemonium-Asia Tour in Taipei
+                            </option>
+                            <option value="concert5">
+                                2023 LE SSERAFIM TOUR FLAME RISES
                             </option>
                             {/* Add more categories as needed */}
                         </select>

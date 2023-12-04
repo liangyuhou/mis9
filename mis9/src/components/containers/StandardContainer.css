@@ -1,0 +1,18 @@
+/* StandardContainer.css */
+
+.homebutton {
+    display: flex;
+    align-items: center;
+    background-color: #556680; /* 绿色背景 */
+    color: white; /* 白色文字 */
+    border: none; /* 无边框 */
+    padding: 10px 20px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时的手型指针 */
+    transition: background-color 0.3s ease; /* 平滑过渡效果 */
+}
+
+.homebutton:hover {
+    background-color: #39485e; /* 绿色背景 */
+    color: white; /* 白色文字 */
+}

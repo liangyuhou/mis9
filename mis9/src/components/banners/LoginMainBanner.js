@@ -2,7 +2,7 @@ import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import './mainBanner.css'; // 导入你的CSS文件
 import { NavLink } from 'react-router-dom';
-import userAvatar from '../banners/user-avatar.jpg'; // 导入用户头像图片
+import userAvatar from '../banners/shaobear.jpg'; // 导入用户头像图片
 
 const MainBannerItem = ({ path, name }) => {
     return (
@@ -26,7 +26,7 @@ function LoginMainBanner() {
             </div>
 
             <div className="login_item">
-                <MainBannerItem path="/member" name="username" />
+                <MainBannerItem path="/member" name="shaobear" />
             </div>
 
             {/* 添加搜索栏 */}

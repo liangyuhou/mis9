@@ -2,21 +2,21 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import StandardLayout from '../components/layout/StandardLayout';
 import './ticketPage.css';
-import seatpic from '../images/seat.webp';
-import concertpic from '../images/concert/concert1.png';
+import seatpic from '../images/seat5.jpg';
+import concertpic from '../images/concert/concert5.jpg';
 //import TicketSystem from './contracts/TicketSystem.json';
 //import Web3 from 'web3';
 
 function TicketPage() {
-    //  const rpcURL = 'https://sepolia.infura.io/v3/2e648bb38f5647e5989031fc3ade76df';
+    //const rpcURL = 'https://sepolia.infura.io/v3/2e648bb38f5647e5989031fc3ade76df';
     // const web3 = new Web3(new Web3.providers.HttpProvider(rpcURL));
 
-    // const contractAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138'; // Sepolia 網絡上的合約地址
+    //const contractAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138'; // Sepolia 網絡上的合約地址
     // const contractABI = TicketSystem.abi;
     // const ticketContract = new web3.eth.Contract(contractABI, contractAddress);
 
     const eventInfo = {
-        eventName: 'BLACKPINK高雄站演唱會 2023｜BORN PINK',
+        eventName: '2023 LE SSERAFIM TOUR FLAME RISES',
         eventSubtitle: '高雄國家體育場 (世運主場館:高雄市左營區世運大道100號)',
         dateTimeLocation: '高雄國家體育場 (世運主場館:高雄市左營區世運大道100號)',
         imageUrl: concertpic, // 請替換成實際的圖片路徑
@@ -38,46 +38,52 @@ function TicketPage() {
         setCaptchaText(randomCaptcha);
     };
     const handleCaptchaChange = (e) => {
-        const value = e.target.value;
-        setCaptchaText(value);
+        setUserInputCaptcha(e.target.value);
     };
 
     const handleCaptchaVerification = async () => {
-        // 验证码验证逻辑
-        const isValid = captchaRef.current.value === captchaText;
+        const isValid = userInputCaptcha === captchaText;
         setCaptchaValid(isValid);
-
         if (!isValid) {
-            console.log('Captcha is invalid');
+            alert('验证码错误');
             return;
         }
 
-        // 获取以太坊账户地址
-        // const accounts = await web3.eth.getAccounts();
-        // if (accounts.length === 0) {
-        //    console.log('Ethereum account not found');
-        //    return;
-        //}
-        //  const account = accounts[0];
+        if (window.ethereum) {
+            try {
+                if (!window.ethereum.selectedAddress) {
+                    await window.ethereum.request({ method: 'eth_requestAccounts' });
+                }
 
-        // 调用智能合约的 buyTicket 方法
-        //try {
-        // selectedTokenId 和 ticketPrice 应根据用户的选择来设置
-        // 确保 ticketPrice 是以 wei 为单位的正确金额
-        // await ticketContract.methods
-        // .buyTicket(selectedTokenId)
-        //  .send({ from: account, value: ticketPrice });
-        console.log('Ticket purchased successfully');
-        // } catch (error) {
-        //   console.error('Error purchasing ticket:', error);
-        //  }
+                // 准备交易参数
+                const transactionParameters = {
+                    to: '0xA8Cb6545ED303def200C5114b29E8ed7cD121D84', // 替换为合约地址或接收方地址
+                    from: window.ethereum.selectedAddress,
+                    value: '800', // 以 wei 为单位的字符串，例如 '10000000000000000' （0.01 ETH）
+                    // 如果交易涉及智能合约，可能需要 'data' 字段
+                };
+
+                // 发送交易
+                const txHash = await window.ethereum.request({
+                    method: 'eth_sendTransaction',
+                    params: [transactionParameters],
+                });
+
+                console.log('交易发送成功，交易哈希:', txHash);
+                // 这里可以根据需求添加后续逻辑，比如更新 UI 显示交易发送成功
+            } catch (error) {
+                console.error('交易发送出错:', error);
+                alert('交易发送失败');
+            }
+        } else {
+            alert('未检测到 MetaMask。');
+        }
     };
-
     const handleRefreshCaptcha = () => {
         // 刷新驗證碼
         generateCaptcha();
     };
-
+    const [isMetaMaskConnected, setIsMetaMaskConnected] = useState(false);
     useEffect(() => {
         console.log('Component re-rendered');
 
@@ -209,10 +215,11 @@ function TicketPage() {
                     <div className="captcha-details">
                         <div className="input-container">
                             <input
-                                ttype="text"
+                                type="text"
                                 placeholder="請輸入驗證碼"
                                 value={userInputCaptcha}
-                                onChange={(e) => setUserInputCaptcha(e.target.value)}
+                                onChange={handleCaptchaChange}
+                                ref={captchaRef} // 设置 ref
                             />
                         </div>
                         <p>※請輸入左圖中的驗證碼</p>

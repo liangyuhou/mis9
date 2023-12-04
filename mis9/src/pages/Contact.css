@@ -3,46 +3,46 @@
 .contact-container {
     max-width: 600px;
     margin: auto;
-  }
-  
-  form {
+}
+
+form {
     display: flex;
     flex-direction: column;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     margin-bottom: 15px;
-  }
-  
-  label {
+}
+
+label {
     font-weight: bold;
     margin-bottom: 5px;
-  }
-  
-  input,
-  textarea,
-  select {
+}
+
+input,
+textarea,
+select {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  button {
-    background-color: #4caf50;
+}
+
+button {
+    background-color: #556680;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  h2 {
+}
+
+button:hover {
+    background-color: #3e4a5e;
+}
+
+h2 {
     color: #333;
     font-size: 24px;
     margin-bottom: 20px;
@@ -50,10 +50,10 @@
     margin-right: auto;
     text-align: center;
     margin-top: 3%;
-  }
-  
-  .btncon button[type="submit"] {
-    background-color: #4caf50;
+}
+
+.btncon button[type='submit'] {
+    background-color: #556680;
     color: white;
     padding: 12px 277px;
     border: none;
@@ -62,10 +62,9 @@
     font-size: 16px;
     transition: background-color 0.3s ease;
     margin-bottom: 5%;
-  }
-  
-  .btncon button[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  /* Add more styles as needed */
-  
+}
+
+.btncon button[type='submit']:hover {
+    background-color: #556680;
+}
+/* Add more styles as needed */
